@@ -1,8 +1,8 @@
-# nlp-05-web-documents
+# nlp-05-web-documents-custom
 
 [![Python 3.14](https://img.shields.io/badge/python-3.14%2B-blue?logo=python)](pyproject.toml)
-[![CI](https://github.com/denisecase/nlp-05-web-documents/actions/workflows/ci-python-zensical.yml/badge.svg)](https://github.com/denisecase/nlp-05-web-documents/actions/workflows/ci-python-zensical.yml)
-[![Documentation](https://img.shields.io/badge/docs-site-blue?logo=github)](https://denisecase.github.io/nlp-05-web-documents/)
+[![CI](https://github.com/Brandon112123/nlp-05-web-documents-custom/actions/workflows/ci-python-zensical.yml/badge.svg)](https://github.com/Brandon112123/nlp-05-web-documents-custom/actions/workflows/ci-python-zensical.yml)
+[![Documentation](https://img.shields.io/badge/docs-site-blue?logo=github)](https://brandon112123.github.io/nlp-05-web-documents-custom/)
 
 [![uv managed](https://img.shields.io/badge/uv-managed-DE5FE9)](https://docs.astral.sh/uv/)
 [![ty type checked](https://img.shields.io/badge/ty-type_checked-2F80ED)](https://docs.astral.sh/ty/)
@@ -13,9 +13,11 @@
 
 ## Project Overview
 
-Author: Denise Case
+Author: Brandon Smith
 
-Date: 2026 October
+Date: 2026-11
+
+Custom: runs the pipeline on Wikipedia pages for a few military conflicts and saves the title, date, location, and result for each into one CSV.
 
 Fifth project in the Web Mining and Applied NLP course.
 
@@ -139,7 +141,7 @@ uv run python -m pytest
 
 ## Project Documentation
 
-The [hosted documentation site](https://denisecase.github.io/nlp-05-web-documents/)
+The [hosted documentation site](https://brandon112123.github.io/nlp-05-web-documents-custom/)
 is published using Zensical and GitHub Pages.
 
 The documentation site is used to present the project report,
@@ -153,8 +155,8 @@ to check project files and publish the docs.
 
 GitHub Actions include:
 
-- [CI: Python and Documentation Checks](https://github.com/denisecase/nlp-05-web-documents/actions/workflows/ci-python-zensical.yml)
-- [CD: Documentation Deployment](https://github.com/denisecase/nlp-05-web-documents/actions/workflows/deploy-zensical.yml)
+- [CI: Python and Documentation Checks](https://github.com/Brandon112123/nlp-05-web-documents-custom/actions/workflows/ci-python-zensical.yml)
+- [CD: Documentation Deployment](https://github.com/Brandon112123/nlp-05-web-documents-custom/actions/workflows/deploy-zensical.yml)
 
 ## Developer Reference
 
@@ -239,7 +241,7 @@ testing, documentation, and code quality.
 
 ## Links
 
-- [Hosted Documentation](https://denisecase.github.io/nlp-05-web-documents/)
+- [Hosted Documentation](https://brandon112123.github.io/nlp-05-web-documents-custom/)
 - [Professional Python Workflow Guide](https://denisecase.github.io/pro-analytics-02/)
 - [Citation](CITATION.cff)
 - [License](LICENSE)
