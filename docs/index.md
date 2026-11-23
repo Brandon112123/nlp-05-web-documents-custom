@@ -106,3 +106,22 @@ provide inputs for subsequent NLP analysis.
 - [Project Instructions](project-instructions.md)
 - [Professional Python Guide](https://denisecase.github.io/pro-analytics-02/)
 - [Professional Python Project Explainer](https://pup-pack.github.io/professional-python-project-explainer/)
+
+
+## My Custom Project: Military Conflict Comparison
+
+For my custom project, I compared the Korean War, Vietnam War, and Gulf War using Wikipedia data.
+
+I used Python, BeautifulSoup, Pandas, and Plotly to collect information and create an interactive dashboard.
+
+### Results
+
+![Military Conflict Comparison](images/military_conflicts_chart.png)
+
+The Vietnam War lasted the longest at 19.49 years, followed by the Korean War at 3.09 years and the Gulf War at 0.57 years.
+
+### What I Learned
+
+I learned how to collect data from different websites and turn it into charts and an interactive map.
+
+One limitation is that I only compared three wars and manually selected their dates and map locations.

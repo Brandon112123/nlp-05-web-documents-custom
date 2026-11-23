@@ -149,6 +149,46 @@ The pipeline ran successfully, showing an average word length of 6.98 characters
 
 I learned how to add a new calculation without changing the original pipeline.
 
+## D3: Military Conflict Comparison
+
+### About My Project
+
+For my custom project, I compared the Korean War, Vietnam War, and Gulf War. I wanted to see how long each war lasted, where it happened, and what the outcome was.
+
+### Data and Tools
+
+I collected information from Wikipedia using Python, Requests, and BeautifulSoup. I used Pandas to organize the data and Plotly to create charts and an interactive map.
+
+Sources:
+- https://en.wikipedia.org/wiki/Korean_War
+- https://en.wikipedia.org/wiki/Vietnam_War
+- https://en.wikipedia.org/wiki/Gulf_War
+
+### How to Run
+
+Run this command:
+
+`uv run python -m nlp.pipeline_military_conflicts`
+
+Then open `military_conflicts_dashboard.html` to view the results.
+
+### Results
+
+- Korean War: 3.09 years
+- Vietnam War: 19.49 years
+- Gulf War: 0.57 years
+
+The Vietnam War lasted the longest out of the three. I also created a dashboard where users can click on each war to learn more about it.
+
+### Limitations
+
+I only compared three wars, and I manually selected the dates and map locations. Wikipedia information can also be difficult to extract because the pages are formatted differently.
+
+### What I Learned
+
+I learned how to collect information from multiple websites, organize it into a dataset, and create interactive visualizations. In the future, I would like to compare more wars and include additional information.
+
+
 ## Project Documentation
 
 The [hosted documentation site](https://brandon112123.github.io/nlp-05-web-documents-custom/)

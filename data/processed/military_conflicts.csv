@@ -1,0 +1,4 @@
+conflict,title,dates,location,outcome,latitude,longitude,source,start_date,end_date,duration_days,duration_years
+Korean War,Korean War,"25 June 1950 – 27 July 1953 (ceasefire) (3 years, 1 month and 2 days)","Korean Peninsula , Yellow Sea , Sea of Japan , Korea Strait , China–North Korea border",Inconclusive,38.0,127.0,https://en.wikipedia.org/wiki/Korean_War,1950-06-25,1953-07-27,1128,3.09
+Vietnam War,Vietnam War,circa 1955 – 30 April 1975,South Vietnam North Vietnam Laos Cambodia South China Sea Gulf of Thailand,North Vietnamese victory,16.0,107.0,https://en.wikipedia.org/wiki/Vietnam_War,1955-11-01,1975-04-30,7120,19.49
+Gulf War,Gulf War,"2 August 1990 – 17 January 1991 ( Operation Desert Shield ) 17 January – 28 February 1991 ( Operation Desert Storm ) (6 months, 3 weeks and 5 days)",Middle East and Persian Gulf,Coalition victory,29.3,47.5,https://en.wikipedia.org/wiki/Gulf_War,1990-08-02,1991-02-28,210,0.57

@@ -1,0 +1,243 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Military Conflict Research Dashboard</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f2f5fa;
+    color: #17243a;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: #162b46;
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+main {
+    max-width: 1180px;
+    margin: auto;
+    padding: 18px;
+}
+
+.card {
+    background: white;
+    border-radius: 14px;
+    padding: 15px;
+    margin-bottom: 18px;
+    box-shadow: 0 3px 16px #182b4515;
+    min-width: 0;
+}
+
+.charts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+@media (max-width: 800px) {
+    .charts {
+        grid-template-columns: 1fr;
+    }
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: #07162899;
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+}
+
+#panel {
+    background: white;
+    width: min(640px, 100%);
+    max-height: calc(100dvh - 24px);
+    overflow-y: auto;
+    overflow-wrap: anywhere;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 10px 35px #0005;
+}
+
+#close {
+    float: right;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.detail {
+    margin-bottom: 16px;
+    line-height: 1.5;
+}
+
+.detail strong {
+    display: block;
+    margin-bottom: 4px;
+    color: #385575;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #5e7188;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Military Conflict Research Dashboard</h1>
+    <p>Korean War | Vietnam War | Gulf War</p>
+</header>
+
+<main>
+
+    <section class="card">
+        <h2>Interactive Conflict Map</h2>
+        <p>Click a marker to view information about each war.</p>
+        <p>Markers show approximate locations, not war boundaries.</p>
+        __MAP__
+    </section>
+
+    <div class="charts">
+        <section class="card">
+            <h2>War Duration Comparison</h2>
+            __BAR__
+        </section>
+
+        <section class="card">
+            <h2>Historical Timeline</h2>
+            __TIMELINE__
+        </section>
+    </div>
+
+</main>
+
+<div id="overlay">
+    <section id="panel"
+             role="dialog"
+             aria-modal="true"
+             aria-labelledby="panel-title">
+
+        <button id="close">Close ✕</button>
+
+        <h2 id="panel-title"></h2>
+
+        <p class="detail">
+            <strong>Dates</strong>
+            <span id="dates"></span>
+        </p>
+
+        <p class="detail">
+            <strong>Location</strong>
+            <span id="location"></span>
+        </p>
+
+        <p class="detail">
+            <strong>Outcome</strong>
+            <span id="outcome"></span>
+        </p>
+
+        <p class="detail">
+            <strong>Comparison Period</strong>
+            <span id="period"></span>
+        </p>
+
+        <p class="detail">
+            <strong>Source</strong>
+            <a id="source-link"
+               target="_blank"
+               rel="noopener noreferrer">
+               Read Wikipedia Article
+            </a>
+        </p>
+
+    </section>
+</div>
+
+<footer>
+    Historical information retrieved from Wikipedia.
+    Comparison dates are selected for analysis.
+</footer>
+
+<script>
+const wars = __DATA__;
+
+const overlay = document.getElementById("overlay");
+const closeButton = document.getElementById("close");
+
+function hidePanel() {
+    overlay.style.display = "none";
+}
+
+closeButton.addEventListener("click", hidePanel);
+
+overlay.addEventListener("click", function(event) {
+    if (event.target === overlay) {
+        hidePanel();
+    }
+});
+
+document.addEventListener("keydown", function(event) {
+    if (event.key === "Escape") {
+        hidePanel();
+    }
+});
+
+const map = document.getElementById("military-map");
+
+map.on("plotly_click", function(event) {
+
+    const name = event.points?.[0]?.customdata?.[0];
+
+    const war = wars.find(
+        item => item.conflict === name
+    );
+
+    if (!war) return;
+
+    document.getElementById("panel-title").textContent =
+        war.conflict;
+
+    document.getElementById("dates").textContent =
+        war.dates || "Not found";
+
+    document.getElementById("location").textContent =
+        war.location || "Not found";
+
+    document.getElementById("outcome").textContent =
+        war.outcome || "Not found";
+
+    document.getElementById("period").textContent =
+        `${war.start_date.slice(0,10)} to ${war.end_date.slice(0,10)}
+        (${war.duration_days} days; ${war.duration_years} years)`;
+
+    document.getElementById("source-link").href =
+        war.source;
+
+    overlay.style.display = "flex";
+
+    closeButton.focus();
+});
+</script>
+
+</body>
+</html>
