@@ -110,18 +110,59 @@ provide inputs for subsequent NLP analysis.
 
 ## My Custom Project: Military Conflict Comparison
 
-For my custom project, I compared the Korean War, Vietnam War, and Gulf War using Wikipedia data.
+### Overview
 
-I used Python, BeautifulSoup, Pandas, and Plotly to collect information and create an interactive dashboard.
+For my custom project, I compared the Korean War, Vietnam War, and Gulf War. I wanted to see how long each conflict lasted and display the differences through charts and an interactive map.
+
+### Data Sources
+
+I used Wikipedia pages for the three conflicts:
+
+- [Korean War](https://en.wikipedia.org/wiki/Korean_War)
+- [Vietnam War](https://en.wikipedia.org/wiki/Vietnam_War)
+- [Gulf War](https://en.wikipedia.org/wiki/Gulf_War)
+
+I selected the conflict dates and map coordinates manually and used information from these pages for the comparison.
+
+### Tools and Methods
+
+I used Python and Requests to retrieve webpage data, BeautifulSoup to extract information, and Pandas to organize the results into a CSV file.
+
+I calculated the duration of each conflict and used Matplotlib to create a comparison chart. I also used Plotly to build an interactive dashboard that lets users explore the conflicts.
+
+To run the custom project:
+
+```bash
+uv run python -m nlp.pipeline_military_conflicts
+uv run python -m nlp.create_chart
+```
+
+The pipeline creates `data/processed/military_conflicts.csv` and `military_conflicts_dashboard.html`. The comparison chart is saved to `docs/images/military_conflicts_chart.png`.
 
 ### Results
 
 ![Military Conflict Comparison](images/military_conflicts_chart.png)
 
-The Vietnam War lasted the longest at 19.49 years, followed by the Korean War at 3.09 years and the Gulf War at 0.57 years.
+| Conflict | Duration |
+|---|---|
+| Korean War | 3.09 years |
+| Vietnam War | 19.49 years |
+| Gulf War | 0.57 years |
 
-### What I Learned
+### Interpretation
 
-I learned how to collect data from different websites and turn it into charts and an interactive map.
+The Vietnam War lasted much longer than the other two conflicts. The comparison demonstrates how differently military conflicts can develop over time.
 
-One limitation is that I only compared three wars and manually selected their dates and map locations.
+The chart makes the differences in duration easier to understand, while the interactive dashboard provides another way to explore the conflicts and their locations.
+
+### Limitations
+
+I only compared three wars, and I manually selected the dates and map coordinates. Different sources may define the beginning and end of a conflict differently, which can affect the calculated durations.
+
+Wikipedia pages also have different HTML structures, making automated data extraction more challenging.
+
+### What I Learned and Next Steps
+
+I learned how to collect information from multiple webpages, organize the results into a dataset, and create both static and interactive visualizations.
+
+If I continued this project, I would compare additional conflicts, improve the automated extraction process, and add more information such as casualties and geographic regions.
