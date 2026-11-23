@@ -260,6 +260,16 @@ def run_transform(
     abstract_word_count: int = len(abstract.split()) if abstract != "unknown" else 0
     LOG.info(f"Calculated abstract word count: {abstract_word_count}")
 
+    # Calculate average word length in the abstract
+    words = abstract.split() if abstract != "unknown" else []
+    average_word_length = (
+        round(sum(len(word.strip(".,!?;:")) for word in words) / len(words), 2)
+        if words
+        else 0.0
+    )
+
+    LOG.info(f"Calculated average word length: {average_word_length}")
+
     # Calculate derived field: author count
     author_count: int = (
         len([a.strip() for a in authors.split(",")]) if authors != "unknown" else 0
@@ -279,6 +289,7 @@ def run_transform(
         "abstract": abstract,
         "abstract_word_count": abstract_word_count,
         "author_count": author_count,
+        "average_word_length": average_word_length,
     }
 
     df = pd.DataFrame([record])

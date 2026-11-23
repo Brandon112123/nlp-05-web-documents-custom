@@ -139,6 +139,16 @@ Run the automated tests:
 uv run python -m pytest
 ```
 
+## D2: Small Technical Modification
+
+I added an average word length calculation to `stage03_transform.py` to analyze the abstract.
+
+I predicted the DataFrame would increase from 8 to 9 columns.
+
+The pipeline ran successfully, showing an average word length of 6.98 characters and 9 columns.
+
+I learned how to add a new calculation without changing the original pipeline.
+
 ## Project Documentation
 
 The [hosted documentation site](https://brandon112123.github.io/nlp-05-web-documents-custom/)
