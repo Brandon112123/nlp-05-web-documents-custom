@@ -1,5 +1,8 @@
 """src/nlp/stage01_extract.py - Stage 01: Extract.
 
+Author: Brandon Smith
+Date: 2026-11-22
+
 NO EDITS REQUIRED IN THIS FILE (if paths have not changed.)
 
 Source: HTML page at configured URL

@@ -1,5 +1,8 @@
 """src/nlp/config.py - Module Configuration.
 
+Author: Brandon Smith
+Date: 2026-11-22
+
 (MODIFY YOUR VERSION OF THIS FILE)
 
 Stores configuration values for the web document EVTL pipeline.

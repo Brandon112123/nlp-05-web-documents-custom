@@ -1,5 +1,8 @@
 """src/nlp/stage03_transform.py.
 
+Author: Brandon Smith
+Date: 2026-11-22
+
 (EDIT YOUR VERSION OF THIS FILE)
 
 Source: validated BeautifulSoup object

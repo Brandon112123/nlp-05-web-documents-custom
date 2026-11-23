@@ -1,5 +1,8 @@
 """src/nlp/stage04_load.py.
 
+Author: Brandon Smith
+Date: 2026-11-22
+
 NO EDITS REQUIRED IN THIS FILE (if paths have not changed.)
 
 Source:  DataFrame (in this case, a Pandas DataFrame, change if using polars)

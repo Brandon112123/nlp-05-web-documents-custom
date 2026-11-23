@@ -1,5 +1,8 @@
 """NLP package.
 
+Author: Brandon Smith
+Date: 2026-11-22
+
 This file can be left empty; it just has to exist.
 
 By adding a file named __init__.py to a folder,

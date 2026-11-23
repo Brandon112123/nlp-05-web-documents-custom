@@ -1,5 +1,8 @@
 """src/nlp/pipeline_web_html.py - Module 5 Script.
 
+Author: Brandon Smith
+Date: 2026-11-22
+
 NO EDITS REQUIRED IN THIS FILE (if paths have not changed.)
 
 Purpose

@@ -1,5 +1,8 @@
 """src/nlp/stage02_validate.py - Validate Stage.
 
+Author: Brandon Smith
+Date: 2026-11-22
+
 (EDIT YOUR VERSION OF THIS FILE)
 
 Source: Raw HTML string
